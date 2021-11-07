@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import SignUpForm from "./containers/SignUpForm";
+import {createGlobalStyle} from "styled-components";
+import "./App.css"
+
+
+const Global = createGlobalStyle`
+  * {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body {
+    background-color: hsl(0, 100%, 74%);
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+`
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <Global/>
+        <SignUpForm/>
+      </>
+
   );
 }
 
